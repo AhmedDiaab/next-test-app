@@ -1,4 +1,6 @@
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
+import Navbar from "@/components/custom/navbar";
 
 export default function RootLayout({
   children,
@@ -8,7 +10,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <ThemeProvider>
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
