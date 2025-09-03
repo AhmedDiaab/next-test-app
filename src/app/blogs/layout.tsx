@@ -3,8 +3,10 @@ export default function BlogLayout({
 }: {
   children: React.ReactNode
 }) {
-  return <div>
-    <div>Blogs</div>
-    <section>{children}</section>
-  </div>
+  return (
+    <div>
+      <div>Blogs</div>
+      <section>{children}</section>
+    </div>
+  )
 }
