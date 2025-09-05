@@ -1,10 +1,10 @@
-export type Post = {
+export type BlogPost = {
     id: string;
     title: string;
     content: string;
 }
 
-const posts: Post[] = [
+const posts: BlogPost[] = [
     { id: "post-1", title: "First Post", content: "This is the content of the first post." },
     { id: "post-2", title: "Second Post", content: "This is the content of the second post." },
     { id: "post-3", title: "Third Post", content: "This is the content of the third post." },
@@ -13,12 +13,12 @@ const posts: Post[] = [
 ];
 
 
-export async function getPost(slug: string): Promise<Post> {
+export async function getPost(slug: string): Promise<BlogPost> {
     // Simulate fetching post data
     return posts.find(post => post.id === slug) || { id: slug, title: "Post Not Found", content: "" };
 }
 
-export async function getAllPosts(): Promise<Post[]> {
+export async function getAllPosts(): Promise<BlogPost[]> {
     // Simulate fetching all posts
     return posts;
 }

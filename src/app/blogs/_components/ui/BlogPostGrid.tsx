@@ -1,7 +1,7 @@
-import { getAllPosts, Post as TPost } from "@/lib/data";
+import { getAllPosts, BlogPost as TPost } from "@/lib/data";
 import Link from "next/link";
 
-export default async function Post({ post }: { post: TPost }) {
+export default async function BlogPostGrid({ post }: { post: TPost }) {
   const posts = await getAllPosts();
 
   return (
